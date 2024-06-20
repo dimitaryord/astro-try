@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Chat from "@/components/main/chat"
+import "@/styles/global.css"
+---
+
+<Layout title="Welcome to My site.">
+  <main class="p-5">
+    <h1 class="text-4xl text-center">SearchAI</h1>
+    <Chat client:load />
+  </main>
+</Layout>
