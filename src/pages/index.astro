@@ -1,12 +1,172 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Chat from "@/components/main/chat"
-import "@/styles/global.css"
+import { Button } from "@/components/ui/button";
+import "@/styles/global.css";
 ---
 
 <Layout title="Welcome to My site.">
-  <main class="p-5">
-    <h1 class="text-4xl text-center">SearchAI</h1>
-    <Chat client:load />
+  <main class="container mx-auto mt-10 space-y-16">
+    <!-- Home Section -->
+    <section
+      id="home"
+      class="text-center py-20 bg-background shadow rounded px-5"
+    >
+      <h1 class="text-4xl font-bold">Welcome to SearchAI</h1>
+      <p class="mt-4 text-lg">
+        The AI-powered search engine that delivers accurate and comprehensive
+        answers to your questions.
+      </p>
+      <Button className="mt-8 px-5 py-5"
+        ><a href="/chat">Search with AI</a></Button
+      >
+      <div class="mt-8">
+        <img
+          src="/public/hero.jpg"
+          alt="SearchAI in action"
+          class="mx-auto rounded shadow-lg"
+        />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-5 bg-card shadow rounded">
+      <h2 class="text-3xl font-bold text-center">Features</h2>
+      <p class="mt-4 text-lg text-center">
+        Discover the powerful features of SearchAI.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-background rounded shadow">
+          <h3 class="text-xl font-bold">AI-Powered Search</h3>
+          <p class="mt-2">
+            Harness the power of AI to get the most accurate and relevant search
+            results.
+          </p>
+        </div>
+        <div class="p-6 bg-background rounded shadow">
+          <h3 class="text-xl font-bold">Real-Time Answers</h3>
+          <p class="mt-2">
+            Get instant answers to your queries with real-time data processing.
+          </p>
+        </div>
+        <div class="p-6 bg-background rounded shadow">
+          <h3 class="text-xl font-bold">Natural Language Processing</h3>
+          <p class="mt-2">
+            Interact with the search engine using natural language for more
+            intuitive searches.
+          </p>
+        </div>
+        <div class="p-6 bg-background rounded shadow">
+          <h3 class="text-xl font-bold">Comprehensive Data</h3>
+          <p class="mt-2">
+            Access a vast database of information from diverse sources for
+            comprehensive results.
+          </p>
+        </div>
+        <div class="p-6 bg-background rounded shadow">
+          <h3 class="text-xl font-bold">User-Friendly Interface</h3>
+          <p class="mt-2">
+            Enjoy a seamless and easy-to-use interface for a better search
+            experience.
+          </p>
+        </div>
+        <div class="p-6 bg-background rounded shadow">
+          <h3 class="text-xl font-bold">Customizable Search Filters</h3>
+          <p class="mt-2">
+            Refine your search with customizable filters to get the most
+            relevant results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-5 bg-background shadow rounded">
+      <h2 class="text-3xl font-bold text-center">Pricing</h2>
+      <p class="mt-4 text-lg text-center">
+        Choose a plan that fits your needs.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-50 rounded shadow">
+          <h3 class="text-xl font-bold">Basic Plan</h3>
+          <p class="mt-2 text-2xl font-bold">$10/month</p>
+          <ul class="mt-4 space-y-2">
+            <li>AI-Powered Search</li>
+            <li>Real-Time Answers</li>
+            <li>Natural Language Processing</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-gray-50 rounded shadow">
+          <h3 class="text-xl font-bold">Standard Plan</h3>
+          <p class="mt-2 text-2xl font-bold">$20/month</p>
+          <ul class="mt-4 space-y-2">
+            <li>AI-Powered Search</li>
+            <li>Real-Time Answers</li>
+            <li>Natural Language Processing</li>
+            <li>Comprehensive Data</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-gray-50 rounded shadow">
+          <h3 class="text-xl font-bold">Premium Plan</h3>
+          <p class="mt-2 text-2xl font-bold">$30/month</p>
+          <ul class="mt-4 space-y-2">
+            <li>AI-Powered Search</li>
+            <li>Real-Time Answers</li>
+            <li>Natural Language Processing</li>
+            <li>Comprehensive Data</li>
+            <li>Customizable Search Filters</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-card shadow rounded">
+      <h2 class="text-3xl font-bold text-center">Contact Us</h2>
+      <p class="mt-4 text-lg text-center">
+        Get in touch with us for any queries or support.
+      </p>
+      <div class="mt-8 flex justify-center">
+        <form class="w-full max-w-lg bg-background p-8 rounded shadow-lg">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-bold mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="w-full p-2 border rounded"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-bold mb-2">Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full p-2 border rounded"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-bold mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              class="w-full p-2 border rounded"
+              placeholder="Your Message"></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-primary/[0.8] text-white py-2 px-4 rounded hover:bg-primary"
+              >Send Message</button
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <a href="https://www.vecteezy.com/free-photos/search"
+      >Search Stock photos by Vecteezy</a
+    >
   </main>
 </Layout>

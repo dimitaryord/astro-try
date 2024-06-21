@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Chat as ChatElement } from "@/components/main/chat";
+import "@/styles/global.css";
+---
+
+<Layout title="Welcome to My site.">
+  <main class="p-5 flex justify-center min-h-[88.5vh]">
+    <section class="w-[60%]">
+      <h1 class="text-4xl text-center">SearchAI</h1>
+      <ChatElement client:load />
+    </section>
+  </main>
+</Layout>

@@ -9,7 +9,7 @@ type NewType = {
     title: string, link: string, content: string
 }
 
-function Chat() {
+export function Chat() {
     const inputRef = useRef<HTMLInputElement>(null)
     const [searches, setSearches] = useState<Array<NewType>>([])
     const [loading, setLoading] = useState<boolean>(false)
@@ -74,5 +74,3 @@ function Chat() {
         </section>
     )
 }
-
-export default Chat

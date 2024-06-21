@@ -1,8 +1,108 @@
 ---
+import "@/styles/global.css";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<div>
-  <p>About page</p>
-</div>
+<Layout title="About us">
+  <main class="container mx-auto mt-10 space-y-16">
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-background shadow rounded px-5">
+      <h1 class="text-4xl font-bold text-center">About Us</h1>
+      <p class="mt-4 text-lg text-center">
+        Learn more about our journey, mission, and the team behind SearchAI.
+      </p>
+      <div class="mt-8 text-center">
+        <img
+          src="/public/about.jpg"
+          alt="Our Team"
+          class="mx-auto rounded shadow-lg"
+        />
+      </div>
+      <div class="mt-8 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mt-8">Our Story</h2>
+        <p class="mt-4 text-lg">
+          SearchAI was founded in 2021 by two tech enthusiasts, Emily Johnson
+          and Michael Smith. With a shared passion for artificial intelligence
+          and a vision to make information accessible to everyone, they embarked
+          on a journey to create an innovative AI-powered search engine. Their
+          goal was simple: to provide users with the most accurate and
+          comprehensive answers to their questions in real-time.
+        </p>
 
-<style></style>
+        <h2 class="text-3xl font-bold mt-8">Our Mission</h2>
+        <p class="mt-4 text-lg">
+          At SearchAI, our mission is to revolutionize the way people search for
+          information. We believe in leveraging the power of AI to deliver
+          precise, relevant, and reliable search results. Our commitment to
+          innovation and excellence drives us to continually improve our
+          technology and provide the best possible experience for our users.
+        </p>
+
+        <h2 class="text-3xl font-bold mt-8">Our Team</h2>
+        <p class="mt-4 text-lg">
+          Our team is composed of experts in artificial intelligence, machine
+          learning, and natural language processing. Each member brings a wealth
+          of knowledge and experience to the table, contributing to the
+          development and success of SearchAI. Meet some of our key team
+          members:
+        </p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-6 bg-card rounded shadow">
+            <h3 class="text-xl font-bold">Emily Johnson</h3>
+            <p class="mt-2">Co-Founder & CEO</p>
+            <p class="mt-2">
+              Emily is a visionary leader with a background in computer science
+              and a passion for AI technology. She oversees the company's
+              strategic direction and operations.
+            </p>
+          </div>
+          <div class="p-6 bg-card rounded shadow">
+            <h3 class="text-xl font-bold">Michael Smith</h3>
+            <p class="mt-2">Co-Founder & CTO</p>
+            <p class="mt-2">
+              Michael is an expert in machine learning and AI development. He
+              leads the technical team, driving innovation and ensuring the
+              highest standards in our technology.
+            </p>
+          </div>
+          <div class="p-6 bg-card rounded shadow">
+            <h3 class="text-xl font-bold">Sophia Brown</h3>
+            <p class="mt-2">Head of Product Development</p>
+            <p class="mt-2">
+              Sophia brings extensive experience in product management and
+              development. She is responsible for the creation and enhancement
+              of our search engine features.
+            </p>
+          </div>
+          <div class="p-6 bg-card rounded shadow">
+            <h3 class="text-xl font-bold">David Lee</h3>
+            <p class="mt-2">Lead AI Scientist</p>
+            <p class="mt-2">
+              David is a specialist in AI algorithms and data analysis. He works
+              on improving the accuracy and efficiency of our search engine.
+            </p>
+          </div>
+          <div class="p-6 bg-card rounded shadow">
+            <h3 class="text-xl font-bold">Emma Davis</h3>
+            <p class="mt-2">Marketing Manager</p>
+            <p class="mt-2">
+              Emma has a keen eye for marketing strategies and user engagement.
+              She ensures that our message reaches the right audience
+              effectively.
+            </p>
+          </div>
+          <div class="p-6 bg-card rounded shadow">
+            <h3 class="text-xl font-bold">James Wilson</h3>
+            <p class="mt-2">Customer Support Lead</p>
+            <p class="mt-2">
+              James leads our customer support team, ensuring that all user
+              queries are handled promptly and efficiently. He is dedicated to
+              providing excellent service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
